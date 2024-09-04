@@ -1,4 +1,6 @@
-﻿namespace Debugger
+﻿using System;
+
+namespace Debugger
 {
     /// <summary>
     /// Defines methods for logging messages at various verbosity levels and handling exceptions.
@@ -13,6 +15,6 @@
         void LogInfo<T>(string message, T source = null) where T : class;
         void LogWarning<T>(string message, T source = null) where T : class;
         void LogError<T>(string message, T source = null) where T : class;
-        void ThrowException<T>(string exception, T source = null) where T : class;
+        void ThrowException<T>(Exception exception, T source = null) where T : class;
     }
 }

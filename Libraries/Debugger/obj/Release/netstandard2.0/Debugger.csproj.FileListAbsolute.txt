@@ -1,0 +1,11 @@
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Debugger.deps.json
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Debugger.dll
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Debugger.pdb
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.csproj.AssemblyReference.cache
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.AssemblyInfoInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.AssemblyInfo.cs
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.csproj.CoreCompileInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.sourcelink.json
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.dll
+C:\Users\hlula\Projects 2024\Libraries\Debugger\obj\Release\netstandard2.0\Debugger.pdb

@@ -1,0 +1,11 @@
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Common.deps.json
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Common.dll
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.0\Common.pdb
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.csproj.AssemblyReference.cache
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.AssemblyInfo.cs
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.sourcelink.json
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.dll
+C:\Users\hlula\Projects 2024\Libraries\Common\obj\Release\netstandard2.0\Common.pdb

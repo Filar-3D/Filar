@@ -1,0 +1,6 @@
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.csproj.AssemblyReference.cache
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.AssemblyInfoInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.AssemblyInfo.cs
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.csproj.CoreCompileInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.0\Native.sourcelink.json

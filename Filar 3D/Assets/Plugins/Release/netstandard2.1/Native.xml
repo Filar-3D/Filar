@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Native</name>
+    </assembly>
+    <members>
+        <member name="T:Native.LogMonoBehaviour">
+            <summary>
+            A MonoBehaviour class that handles logging with different verbosity levels in Unity.
+            Implements the <see cref="T:Debugger.ILogger"/> interface to provide custom logging functionality.
+            </summary>
+            <remarks>
+            The <see cref="T:Native.LogMonoBehaviour"/> class allows for logging messages with varying levels of verbosity
+            and includes support for logging exceptions. The verbosity of the logs can be controlled via the
+            <see cref="P:Native.LogMonoBehaviour.EnabledLogVerbosity"/> property. Logs are formatted using the <see cref="T:Debugger.LogFormat"/> class.
+            </remarks>
+        </member>
+        <member name="P:Native.LogMonoBehaviour.EnabledLogVerbosity">
+            <summary>
+            The current verbosity level for logging. Only logs at this level or higher will be processed.
+            </summary>
+        </member>
+        <member name="M:Native.LogMonoBehaviour.Log``1(Debugger.LogVerbosity,System.String,``0)">
+            <summary>
+            Logs a message with the specified verbosity and an optional source.
+            </summary>
+            <typeparam name="T">The type of the source. Must be a class.</typeparam>
+            <param name="verbosity">The verbosity level of the log message.</param>
+            <param name="message">The message to be logged.</param>
+            <param name="source">An optional source of the log message. Can be <c>null</c>.</param>
+        </member>
+        <member name="M:Native.LogMonoBehaviour.LogInfo``1(System.String,``0)">
+            <summary>
+            Logs an informational message with an optional source.
+            </summary>
+            <typeparam name="T">The type of the source. Must be a class.</typeparam>
+            <param name="message">The informational message to be logged.</param>
+            <param name="source">An optional source of the log message. Can be <c>null</c>.</param>
+        </member>
+        <member name="M:Native.LogMonoBehaviour.LogWarning``1(System.String,``0)">
+            <summary>
+            Logs a warning message with an optional source.
+            </summary>
+            <typeparam name="T">The type of the source. Must be a class.</typeparam>
+            <param name="message">The warning message to be logged.</param>
+            <param name="source">An optional source of the log message. Can be <c>null</c>.</param>
+        </member>
+        <member name="M:Native.LogMonoBehaviour.LogError``1(System.String,``0)">
+            <summary>
+            Logs an error message with an optional source.
+            </summary>
+            <typeparam name="T">The type of the source. Must be a class.</typeparam>
+            <param name="message">The error message to be logged.</param>
+            <param name="source">An optional source of the log message. Can be <c>null</c>.</param>
+        </member>
+        <member name="M:Native.LogMonoBehaviour.ThrowException``1(System.Exception,``0)">
+            <summary>
+            Logs an exception message with an optional source and throws the exception.
+            </summary>
+            <typeparam name="T">The type of the source. Must be a class.</typeparam>
+            <param name="exception">The exception to be logged and thrown.</param>
+            <param name="source">An optional source of the log message. Can be <c>null</c>.</param>
+            <exception cref="T:System.Exception">The exception being logged and thrown.</exception>
+        </member>
+    </members>
+</doc>
