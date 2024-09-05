@@ -1,13 +1,13 @@
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.deps.json
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.dll
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.pdb
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.xml
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.csproj.AssemblyReference.cache
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.AssemblyInfoInputs.cache
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.AssemblyInfo.cs
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.csproj.CoreCompileInputs.cache
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.sourcelink.json
-C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.deps.json
-C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.dll
-C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.pdb
-C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Native.xml
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.csproj.Up2Date
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.dll
 C:\Users\hlula\Projects 2024\Libraries\Native\obj\Release\netstandard2.1\Native.xml

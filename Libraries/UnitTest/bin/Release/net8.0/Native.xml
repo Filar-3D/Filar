@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Native</name>
+    </assembly>
+    <members>
+        <member name="P:Native.BaseLogBehaviour.LogWriters">
+            <summary>
+            Gets or sets the list of <see cref="T:Debugger.IWriter"/> instances used to handle log output.
+            If not set, a default <see cref="T:Debugger.UnityConsoleLogger"/> is used.
+            </summary>
+        </member>
+        <member name="P:Native.BaseLogBehaviour.EnabledLogVerbosity">
+            <summary>
+            Gets the verbosity level for logging. Only logs with a verbosity level
+            equal to or higher than this value will be processed.
+            </summary>
+        </member>
+        <member name="T:Native.IVirtualKeyboard">
+            <summary>
+            Represents an interface for a virtual keyboard used in Unity applications.
+            </summary>
+            <remarks>
+            This interface is intended for use with Unity's touch keyboard functionality. 
+            For more information on Unity's touch keyboard, refer to the 
+            <a href="https://docs.unity3d.com/Manual/script-TouchKeyboard.html">Unity Touch Keyboard Documentation</a>.
+            </remarks>
+        </member>
+        <member name="M:Native.IVirtualKeyboard.Show(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)">
+            <summary>
+            Displays the virtual keyboard to the user with various customization options.
+            </summary>
+            <param name="prompt">
+            The prompt text to display to the user. If <c>null</c>, no prompt will be shown.
+            </param>
+            <param name="keyboardType">
+            The type of keyboard to display. Defaults to <see cref="F:UnityEngine.TouchScreenKeyboardType.Default"/>.
+            For more options, refer to the 
+            <a href="https://docs.unity3d.com/ScriptReference/TouchScreenKeyboardType.html">TouchScreenKeyboardType Documentation</a>.
+            </param>
+            <param name="enableAutoCorrection">
+            Whether to enable auto-correction. Defaults to <c>false</c>.
+            </param>
+            <param name="useMultiLines">
+            Whether to allow multiple lines of input. Defaults to <c>false</c>.
+            </param>
+            <param name="secure">
+            Whether to use secure input mode (e.g., for password input). Defaults to <c>false</c>.
+            </param>
+            <param name="enableAlert">
+            Whether to enable an alert message. Defaults to <c>false</c>.
+            </param>
+            <param name="initialText">
+            The initial text to display in the input field. If <c>null</c>, no initial text will be shown.
+            </param>
+            <param name="maxTextLength">
+            The maximum length of the input text. Defaults to <c>100</c>.
+            </param>
+            <remarks>
+            For additional details on using these parameters with Unity's touch keyboard, refer to the
+            <a href="https://docs.unity3d.com/Manual/script-TouchKeyboard.html">Unity Touch Keyboard Documentation</a>.
+            </remarks>
+        </member>
+        <member name="T:Native.Singleton`1">
+            <summary>
+            A generic singleton base class for MonoBehaviour types.
+            <para>Provides a singleton instance of the derived class.</para>
+            <para>For more information on singletons, see <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singleton Pattern on Wikipedia</a>.</para>
+            </summary>
+            <typeparam name="T">The type of the singleton instance, which must be a MonoBehaviour.</typeparam>
+        </member>
+        <member name="P:Native.Singleton`1.Instance">
+            <summary>
+            Gets the singleton instance of the specified type.
+            <para>Finds the singleton instance if it does not already exist.</para>
+            <para>For more information on finding objects of a type, see <a href="https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html">FindObjectOfType in Unity Documentation</a>.</para>
+            </summary>
+        </member>
+        <member name="P:Native.Singleton`1.DoNotDestroyOnLoad">
+            <summary>
+            Indicates whether the singleton instance should not be destroyed on scene load.
+            <para>If set to true, the instance will persist between scenes.</para>
+            <para>For more information on this behavior, see <a href="https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html">DontDestroyOnLoad in Unity Documentation</a>.</para>
+            </summary>
+        </member>
+        <member name="M:Native.Singleton`1.Init">
+            <summary>
+            Initializes the singleton instance.
+            <para>Sets up the singleton behavior and optionally prevents destruction on scene load.</para>
+            <para>Also handles the case where another instance of the singleton already exists and destroys the extra instance.</para>
+            </summary>
+        </member>
+        <member name="T:Native.UI.OnScreenKeyboard">
+            <summary>
+            Implements the <see cref="T:Native.IVirtualKeyboard"/> interface to provide an on-screen keyboard functionality.
+            </summary>
+            <remarks>
+            This class is a custom implementation for providing on-screen keyboard functionalities, which may 
+            involve interactions with Unity's <see cref="T:UnityEngine.TouchScreenKeyboard"/> or other input methods.
+            For details on how to handle on-screen keyboards in Unity, refer to the 
+            <a href="https://docs.unity3d.com/Manual/script-TouchKeyboard.html">Unity Touch Keyboard Documentation</a>.
+            </remarks>
+        </member>
+        <member name="M:Native.UI.OnScreenKeyboard.Show(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)">
+            <summary>
+            Displays the virtual keyboard with various customization options.
+            </summary>
+            <param name="prompt">
+            The prompt text to display to the user. If <c>null</c>, no prompt will be shown.
+            </param>
+            <param name="keyboardType">
+            The type of keyboard to display. Defaults to <see cref="F:UnityEngine.TouchScreenKeyboardType.Default"/>.
+            For more options, refer to the 
+            <a href="https://docs.unity3d.com/ScriptReference/TouchScreenKeyboardType.html">TouchScreenKeyboardType Documentation</a>.
+            </param>
+            <param name="enableAutoCorrection">
+            Whether to enable auto-correction. Defaults to <c>false</c>.
+            </param>
+            <param name="useMultiLines">
+            Whether to allow multiple lines of input. Defaults to <c>false</c>.
+            </param>
+            <param name="secure">
+            Whether to use secure input mode (e.g., for password input). Defaults to <c>false</c>.
+            </param>
+            <param name="enableAlert">
+            Whether to enable an alert message. Defaults to <c>false</c>.
+            </param>
+            <param name="initialText">
+            The initial text to display in the input field. If <c>null</c>, no initial text will be shown.
+            </param>
+            <param name="maxTextLength">
+            The maximum length of the input text. Defaults to <c>300</c>.
+            </param>
+            <remarks>
+            If the virtual keyboard is already showing, this method will not create a new instance.
+            </remarks>
+        </member>
+        <member name="T:Native.UI.TouchScreenKeyboard">
+            <summary>
+            Implements the <see cref="T:Native.IVirtualKeyboard"/> interface to provide a virtual keyboard using Unity's TouchScreenKeyboard.
+            </summary>
+            <remarks>
+            This class wraps Unity's <see cref="T:UnityEngine.TouchScreenKeyboard"/> to provide an interface for displaying a virtual keyboard. 
+            For more information on Unity's TouchScreenKeyboard, refer to the 
+            <a href="https://docs.unity3d.com/Manual/script-TouchKeyboard.html">Unity Touch Keyboard Documentation</a>.
+            </remarks>
+        </member>
+        <member name="M:Native.UI.TouchScreenKeyboard.Show(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)">
+            <summary>
+            Displays the virtual keyboard with various customization options.
+            </summary>
+            <param name="prompt">
+            The prompt text to display to the user. If <c>null</c>, no prompt will be shown.
+            </param>
+            <param name="keyboardType">
+            The type of keyboard to display. Defaults to <see cref="F:UnityEngine.TouchScreenKeyboardType.Default"/>.
+            For more options, refer to the 
+            <a href="https://docs.unity3d.com/ScriptReference/TouchScreenKeyboardType.html">TouchScreenKeyboardType Documentation</a>.
+            </param>
+            <param name="enableAutoCorrection">
+            Whether to enable auto-correction. Defaults to <c>false</c>.
+            </param>
+            <param name="useMultiLines">
+            Whether to allow multiple lines of input. Defaults to <c>false</c>.
+            </param>
+            <param name="secure">
+            Whether to use secure input mode (e.g., for password input). Defaults to <c>false</c>.
+            </param>
+            <param name="enableAlert">
+            Whether to enable an alert message. Defaults to <c>false</c>.
+            </param>
+            <param name="initialText">
+            The initial text to display in the input field. If <c>null</c>, no initial text will be shown.
+            </param>
+            <param name="maxTextLength">
+            The maximum length of the input text. Defaults to <c>300</c>.
+            </param>
+            <remarks>
+            If the virtual keyboard is already showing, this method will not create a new instance.
+            </remarks>
+        </member>
+        <member name="M:Native.UI.TouchScreenKeyboard.Dispose">
+            <summary>
+            Disposes of the virtual keyboard resources.
+            </summary>
+            <remarks>
+            The current implementation throws <see cref="T:System.NotImplementedException"/>. You should provide a proper implementation
+            to handle the disposal of resources and cleanup.
+            </remarks>
+        </member>
+        <member name="M:Native.UI.TouchScreenKeyboard.Finalize">
+            <summary>
+            Finalizer for the <see cref="T:Native.UI.TouchScreenKeyboard"/> class.
+            </summary>
+            <remarks>
+            This finalizer is not currently implemented. Consider implementing proper cleanup if needed.
+            </remarks>
+        </member>
+    </members>
+</doc>

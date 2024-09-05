@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Native\Native.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Platforms\Standalone\Windows\" />
+  </ItemGroup>
+
+</Project>

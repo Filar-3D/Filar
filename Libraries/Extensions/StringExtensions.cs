@@ -1,4 +1,5 @@
 ﻿using Common;
+using UnityEngine;
 
 namespace Extensions
 {
@@ -23,6 +24,14 @@ namespace Extensions
         {
             string stringWithFontWeight = isBold ? $"<b>{str}</b>" : str;
             string newString = $"<color={color.GetColorValue()}>{stringWithFontWeight}</color>";
+
+            return newString;
+        }
+
+        public static string FormatString(this string str, Color32 color, bool isBold = false)
+        {
+            string stringWithFontWeight = isBold ? $"<b>{str}</b>" : str;
+            string newString = $"<color={color}>{stringWithFontWeight}</color>";
 
             return newString;
         }

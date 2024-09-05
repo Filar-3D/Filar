@@ -1,0 +1,24 @@
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Services.deps.json
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Services.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Services.pdb
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Common.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Debugger.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Extensions.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Native.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Native.pdb
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Native.xml
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Common.pdb
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Debugger.pdb
+C:\Users\hlula\Projects 2024\Libraries\Services\bin\Release\netstandard2.1\Extensions.pdb
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Services.deps.json
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Services.dll
+C:\Users\hlula\Projects 2024\Filar 3D\Assets\Plugins\Release\netstandard2.1\Services.pdb
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.csproj.AssemblyReference.cache
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.AssemblyInfoInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.AssemblyInfo.cs
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.csproj.CoreCompileInputs.cache
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.sourcelink.json
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.csproj.Up2Date
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.dll
+C:\Users\hlula\Projects 2024\Libraries\Services\obj\Release\netstandard2.1\Services.pdb
