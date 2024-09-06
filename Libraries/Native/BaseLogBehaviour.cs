@@ -18,7 +18,7 @@ namespace Native
 
         /// <summary>
         /// Gets or sets the list of <see cref="ILogWriter"/> instances used to handle log output.
-        /// If not set, a default <see cref="UnityConsoleLogger"/> is used.
+        /// If not set, a default <see cref="UnityConsoleLogWriter"/> is used.
         /// </summary>
         public List<ILogWriter> LogWriters
         {
@@ -27,7 +27,7 @@ namespace Native
                 if(logWriters == null)
                 {
                     // Creating a default log writer incase there's no value assigned.
-                    logWriters = new List<ILogWriter> { new UnityConsoleLogger() };
+                    logWriters = new List<ILogWriter> { new UnityConsoleLogWriter() };
                 }
 
                 return logWriters;
@@ -76,6 +76,17 @@ namespace Native
             }
 
             logWriters = loggingServices.GetServices().ToList();
+
+            if(logWriters == null)
+            {
+                ThrowException(new InvalidOperationException("There were no log writers found."));
+            }
+
+            // Clear previous logs if any.
+            foreach (ILogWriter logWriter in logWriters)
+            {
+                logWriter.Clear();
+            }
         }
 
         /// <summary>
@@ -91,11 +102,10 @@ namespace Native
                 return;
             }
 
-            string formattedLogString = LogFormat.GetLogFormatedString(verbosity, message, this);
 
             foreach (ILogWriter writer in LogWriters)
             {
-                writer.Write(verbosity, formattedLogString, args);
+                writer.Write(gameObject.name, verbosity, message, args);
             }
         }
 
@@ -106,18 +116,16 @@ namespace Native
         /// <param name="args">Arguments to format the log message.</param>
         public void LogInfo(string message, params object[] args)
         {
-            LogVerbosity logVerbosity = LogVerbosity.Info;
+            LogVerbosity verbosity = LogVerbosity.Info;
 
-            if (EnabledLogVerbosity < logVerbosity)
+            if (EnabledLogVerbosity < verbosity)
             {
                 return;
             }
 
-            string formattedLogString = LogFormat.GetLogFormatedString(logVerbosity, message, this);
-
             foreach (ILogWriter writer in LogWriters)
             {
-                writer.Write(logVerbosity, formattedLogString, args);
+                writer.Write(gameObject.name, verbosity, message, args);
             }
         }
 
@@ -128,18 +136,16 @@ namespace Native
         /// <param name="args">Arguments to format the log message.</param>
         public void LogWarning(string message, params object[] args)
         {
-            LogVerbosity logVerbosity = LogVerbosity.Warning;
+            LogVerbosity verbosity = LogVerbosity.Warning;
 
-            if (EnabledLogVerbosity < logVerbosity)
+            if (EnabledLogVerbosity < verbosity)
             {
                 return;
             }
 
-            string formattedLogString = LogFormat.GetLogFormatedString(logVerbosity, message, this);
-
             foreach (ILogWriter writer in LogWriters)
             {
-                writer.Write(logVerbosity, formattedLogString, args);
+                writer.Write(gameObject.name, verbosity, message, args);
             }
         }
 
@@ -150,18 +156,16 @@ namespace Native
         /// <param name="args">Arguments to format the log message.</param>
         public void LogError(string message, params object[] args)
         {
-            LogVerbosity logVerbosity = LogVerbosity.Error;
+            LogVerbosity verbosity = LogVerbosity.Error;
 
-            if (EnabledLogVerbosity < logVerbosity)
+            if (EnabledLogVerbosity < verbosity)
             {
                 return;
             }
 
-            string formattedLogString = LogFormat.GetLogFormatedString(logVerbosity, message, this);
-
             foreach (ILogWriter writer in LogWriters)
             {
-                writer.Write(logVerbosity, formattedLogString, args);
+                writer.Write(gameObject.name, verbosity, message, args);
             }
         }
 
@@ -171,13 +175,11 @@ namespace Native
         /// <param name="exception">The exception to log and throw.</param>
         public void ThrowException(Exception exception)
         {
-            LogVerbosity logVerbosity = LogVerbosity.Exception;
-
-            string formattedLogString = LogFormat.GetLogFormatedString(logVerbosity, exception.Message, this);
+            LogVerbosity verbosity = LogVerbosity.Exception;
 
             foreach (ILogWriter writer in LogWriters)
             {
-                writer.Write(logVerbosity, formattedLogString);
+                writer.Write(gameObject.name, verbosity, exception.Message);
             }
 
             throw exception;

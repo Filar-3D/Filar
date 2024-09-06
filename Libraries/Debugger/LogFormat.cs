@@ -1,5 +1,8 @@
 ﻿using Common;
 using Extensions;
+using System;
+using System.Text.RegularExpressions;
+using UnityEngine;
 
 namespace Debugger
 {
@@ -28,7 +31,7 @@ namespace Debugger
         /// </list>
         /// The verbosity level's color is determined by the <see cref="GetLogVerbosityColor"/> method.
         /// </remarks>
-        public static string GetLogFormatedString<T>(LogVerbosity verbosity, string message, T rootClass = null) where T : class
+        public static string GetConsoleLogFormatedString<T>(LogVerbosity verbosity, string message, T rootClass = null) where T : class
         {
             string rootName = (rootClass != null) ? rootClass.ToString() : "[Root class unassigned]";
             string formattedLogText = $"Log: [{verbosity.ToString().FormatString(color: GetLogVerbosityColor(verbosity), isBold: true)}] Message: {message.FormatString(color: ColorRef.White, isBold: true)} Root: {rootName.FormatString(color: ColorRef.Magenta, isBold: true)}";
@@ -55,6 +58,55 @@ namespace Debugger
                 LogVerbosity.Exception => ColorRef.Red,
                 _=> ColorRef.White
             };
+        }
+
+        public static string GetFileLogFormatedString(string log)
+        {
+            string regexPattern = @"^[<color=/>\b]$";
+            Regex regex = new Regex(regexPattern);
+
+            return regex.Replace(log, string.Empty);
+        }
+
+        public static string GetFileLogFormatHeaderTemplate(LogFileFormatTemplate template, string dateTimeFormat = null)
+        {
+            string dateTimeStamp = DateTime.Now.ToString(dateTimeFormat);
+
+            // TODO: Add more tamplates to choose from.
+            switch (template)
+            {
+                case LogFileFormatTemplate.Default:
+
+                    return $"[Log File] [{dateTimeStamp}]\n________________________________________________\n\n" +
+                        $"[Runtime Info] - Product: {Application.productName}\n\t\t Company: {Application.companyName}\n\t\t Version: {Application.version}\n\t\t Platform: {Application.platform}\n\n" +
+                        $"Tip - Trace: [GameObject][Class][Method][Line]\n________________________________________________\n\n[Logs generated from Unity version: {Application.unityVersion}]\n\n";
+                default:
+                    return $"Template header format: {template} is not found - TODO: Not yet implemented.";
+            }
+        }
+
+        public static string GetFileLogFormatTemplate(string gameObjectName, LogVerbosity verbosity, LogFileFormatTemplate template, string dateTimeFormat, string logMessage, params object[] args)
+        {
+            string dateTimeStamp = DateTime.Now.ToString(dateTimeFormat);
+            var classInfo = LogUtility.GetLogInfo();
+
+            // TODO: Add more tamplates to choose from.
+            switch (template)
+            {
+                case LogFileFormatTemplate.Default:
+                  
+                    string defaultLogMessageFormat = string.Format(logMessage, args);
+
+                    return $"[{dateTimeStamp}] [{verbosity}]: {defaultLogMessageFormat} \n\t   [Trace]: GameObject={gameObjectName} Class={classInfo.fileName} Function={classInfo.methodName} Line=({classInfo.lineNumber})\n\t   " +
+                        $"[Directory]: {classInfo.filePath}\n";
+                case LogFileFormatTemplate.Standard:
+                    string standardLogMessageFormat = string.Format(logMessage, args);
+
+                    return $"[{dateTimeStamp}] {verbosity}: [{standardLogMessageFormat}]\n\t   Trace: [{gameObjectName}][{classInfo.fileName}][{classInfo.methodName}][{classInfo.lineNumber}]\n\t   " +
+                        $"File Path: [{classInfo.filePath}]\n";
+                default:
+                    return $"Template content format: {template} is not found - TODO: Not yet implemented.";
+            }
         }
     }
 }

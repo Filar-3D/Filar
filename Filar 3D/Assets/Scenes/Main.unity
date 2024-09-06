@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7e5fb0ad3bcea40b0d3977d3f8f47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <EnabledLogVerbosity>k__BackingField: 0
+  <EnabledLogVerbosity>k__BackingField: 4
   <DoNotDestroyOnLoad>k__BackingField: 1
 --- !u!114 &1251543018
 MonoBehaviour:

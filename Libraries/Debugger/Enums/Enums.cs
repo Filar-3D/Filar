@@ -64,10 +64,45 @@
         Error
     }
 
+    /// <summary>
+    /// Specifies the type of log writer to use.
+    /// </summary>
     public enum LogWriterType
     {
+        /// <summary>
+        /// Logs output to the console.
+        /// </summary>
         ConsoleWriter,
+
+        /// <summary>
+        /// Logs output to a file.
+        /// </summary>
         FileWriter,
+
+        /// <summary>
+        /// Logs output to a screen or display.
+        /// </summary>
         ScreenWriter
+    }
+
+    /// <summary>
+    /// Specifies the format template used for log file formatting.
+    /// </summary>
+    public enum LogFileFormatTemplate
+    {
+        /// <summary>
+        /// The default format template for log files.
+        /// </summary>
+        Default,
+
+        /// <summary>
+        /// The standard format template for log files.
+        /// </summary>
+        Standard,
+
+        /// <summary>
+        /// A custom format template for log files, allowing for user-defined formatting.
+        /// </summary>
+        Custom
     }
 }

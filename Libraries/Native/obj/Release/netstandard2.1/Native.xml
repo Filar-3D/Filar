@@ -13,7 +13,7 @@
         <member name="P:Native.BaseLogBehaviour.LogWriters">
             <summary>
             Gets or sets the list of <see cref="T:Debugger.ILogWriter"/> instances used to handle log output.
-            If not set, a default <see cref="T:Debugger.UnityConsoleLogger"/> is used.
+            If not set, a default <see cref="T:Debugger.UnityConsoleLogWriter"/> is used.
             </summary>
         </member>
         <member name="P:Native.BaseLogBehaviour.EnabledLogVerbosity">

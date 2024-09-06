@@ -18,13 +18,13 @@ namespace Debugger
         /// The type of log writer to create. This parameter determines which concrete implementation of <see cref="ILogWriter"/> will be returned.
         /// Valid values include:
         /// <list type="bullet">
-        /// <item><description><see cref="LogWriterType.ConsoleWriter"/>: Creates an instance of <see cref="UnityConsoleLogger"/>.</description></item>
-        /// <item><description><see cref="LogWriterType.FileWriter"/>: Creates an instance of <see cref="LogFileWriter"/> with the specified <paramref name="outputPath"/>.</description></item>
+        /// <item><description><see cref="LogWriterType.ConsoleWriter"/>: Creates an instance of <see cref="UnityConsoleLogWriter"/>.</description></item>
+        /// <item><description><see cref="LogWriterType.FileWriter"/>: Creates an instance of <see cref="FileLogWriter"/> with the specified <paramref name="outputPath"/>.</description></item>
         /// </list>
         /// </param>
         /// <param name="outputPath">
         /// The file path where logs will be written. This parameter is used only when creating a <see cref="LogWriterType.FileWriter"/>. 
-        /// If <c>null</c>, a default file path may be used if defined in the <see cref="LogFileWriter"/> implementation.
+        /// If <c>null</c>, a default file path may be used if defined in the <see cref="FileLogWriter"/> implementation.
         /// </param>
         /// <returns>
         /// An instance of <see cref="ILogWriter"/> corresponding to the specified <paramref name="writerType"/>.
@@ -36,8 +36,8 @@ namespace Debugger
         {
             return writerType switch
             { 
-                LogWriterType.ConsoleWriter => new UnityConsoleLogger(),
-                LogWriterType.FileWriter => new LogFileWriter(outputPath),
+                LogWriterType.ConsoleWriter => new UnityConsoleLogWriter(),
+                LogWriterType.FileWriter => new FileLogWriter(outputPath),
                 _=> throw new ArgumentException("Invalid log writer type provided.", nameof(writerType))
             };
         }

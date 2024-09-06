@@ -12,8 +12,6 @@ public class Singletons : Singleton<BaseLogBehaviour>
     {
         base.Init(service);
 
-        LogWriters.Add(new LogFileWriter(""));
-
         int num = 001010101001;
 
       
